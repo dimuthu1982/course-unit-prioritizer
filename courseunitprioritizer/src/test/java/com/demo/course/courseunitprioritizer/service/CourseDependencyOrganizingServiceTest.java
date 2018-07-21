@@ -38,8 +38,8 @@ public class CourseDependencyOrganizingServiceTest {
 
     @Test
     public void shouldReturnValidDependencyOrder() throws FileProcessingServiceException {
-        Path coursesFilePath = Paths.get("C:\\Software\\DKA\\courses.csv");
-        Path prerequisitesFilePath = Paths.get("C:\\Software\\DKA\\prerequisites.csv");
+        Path coursesFilePath = Paths.get(coursesFile.getAbsolutePath());
+        Path prerequisitesFilePath = Paths.get(prerequisitesFile.getAbsolutePath());
 
         Map<Course, List<Course>> courseDependentList = new CourseDependencyHolderFacade(coursesFilePath, prerequisitesFilePath).generate();
 
